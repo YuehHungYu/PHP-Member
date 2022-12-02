@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>查詢密碼</title>
+        <style>
+            body{
+                background-image:url(jpg/searchpwd.jpg);
+                background-repeat: no-repeat; /*repeat*/
+                background-position: center center ;
+                background-attachment: fixed; /*scroll*/
+                background-size: cover;
+            }
+            h1{
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>請輸入您的名字與email帳號<br>並選擇一種顯示方式<br>然後按查詢建<br></h1>
+        <form action="search.php" method="post">
+            <table align="center">
+                <tr><td>帳號:</td>
+                    <td><input type="text" name="account" size="10"></td>
+                </tr>
+                <tr><td>電子郵件:</td>
+                    <td><input type="text" name="email" size="30"></td>
+                </tr>
+                <tr><td>顯示方式:</td>
+                    <td>
+                        <select name="show_method">
+                            <option value="網頁顯示">網頁顯示</option>
+                            <option value="email傳送">email傳送</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" align="center">
+                        <input type="submit" value="查詢">
+                        <input type="reset" value="重設">
+                        <a href="index.html"><input type="button" value="回上一頁" ></a>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

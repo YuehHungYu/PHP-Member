@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>會員管理系統</title>
+    <script type="text/javascript">
+        function check_data(){
+            if(document.myForm.account.value.length==0){
+                alert("帳號欄不能空白!!!!");
+            }else if(document.myForm.password.value.length==0){
+                alert("密碼欄不能空白!!!!")
+            }else{
+                myForm.submit();
+            }
+        }
+    </script>
+    <style>
+        body{
+            background-image:url(jpg/member.jpg);
+            background-repeat: no-repeat; /*repeat*/
+            background-position: center center ;
+            background-attachment: fixed; /*scroll*/
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <p><h2 align="center">歡迎來到本站，您必須成為本站的會員，才有權使用本站的功能。<br></h2>
+        <h3 align="center">若您已經擁有會員，請輸入您的帳號密碼，然後按"登入"鈕;<br>
+        若尚未成為本站會員，請點選"加入會員";<br>
+        若您忘記您的帳號及密碼，請點選"查詢密碼"。</h3>
+    </p>
+    <form action="checkpwd.php" method="post" name="myForm">
+        <table width="40%" align="center">
+            <tr>
+                <td align="center">
+                    <font color="#3333FF">帳號:</font>
+                    <input name="account" type="text" size="15">
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <font color="#3333FF">密碼:</font>
+                    <input name="password" type="password" size="15">
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <input type="button" value="登入" onClick="check_data()">
+                    <input type="reset" value="重填"
+                </td>
+            </tr>
+        </table>
+    </form>
+    <p align="center">
+        <a href="join.html">加入會員</a>
+        <a href="search_pwd.html">查詢密碼</a>
+    </p>
+</body>
+</html>
